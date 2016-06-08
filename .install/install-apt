@@ -1,0 +1,46 @@
+#!/bin/sh
+
+sudo apt-get -y install \
+  ack \
+  bitlbee \
+  cmake \
+  coreutils \
+  ctags \
+  emacs \
+  erlang \
+  gawk \
+  gfortran \
+  git \
+  gnupg \
+  gnuplot \
+  ifstat \
+  iftop \
+  irssi \
+  jasper \
+  lame \
+  leiningen \
+  llvm \
+  markdown \
+  msmtp \
+  mtr \
+  mutt \
+  nmap \
+  notmuch \
+  ocaml \
+  octave \
+  openvpn \
+  pv \
+  runit \
+  sbcl \
+  socat \
+  ssldump \
+  tcpflow \
+  tmux \
+  tree \
+  unrar \
+  watch \
+  wget \
+  x264 \
+  yasm \
+  zookeeper \
+  zsh

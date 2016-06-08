@@ -1,0 +1,1 @@
+xmodmap -e "keycode 12 = 3 numbersign"

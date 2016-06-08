@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+import logging
+logging.raiseExceptions = False
+
+import keyring
+import argparse
+import sys
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-s', '--service')
+parser.add_argument('-a', '--account')
+parser.add_argument('-p', '--secret')
+parser.add_argument('-u', '--urn')
+args = parser.parse_args()
+
+service = args.service
+account = args.account
+secret = args.secret
+urn = args.urn
+
+if secret:
+  # read from stdin
+  if secret == "-":
+    secret = ''.join(sys.stdin.readlines())
+
+  keyring.set_password(service, account, secret)
+
+else:
+  # urn: `account:service` as single string
+  if urn:
+    (account, service) = urn.split(":")
+  else:
+    if not (service and account):
+      parser.error("use both -s service and -a account, OR -u urn.")
+
+  secret = keyring.get_password(service, account)
+
+  if secret:
+    print secret
+  else:
+    exit(1)

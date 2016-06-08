@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "raring64"
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+  end
+
+  script = File.read(File.expand_path("~/dotfiles/.install/install-linux"))
+  config.vm.provision :shell, :inline => script
+end

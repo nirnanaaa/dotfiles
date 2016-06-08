@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+set -u
+set -o pipefail
+
+key="$1"
+account="$2"
+url="$(kc -s calendar.google.com -a $account)"
+
+if curl -sI "$url" >/dev/null
+  then
+    curl -s "$url" > ~/.calendar/$key.ics
+  else
+    exit 1
+fi
+
