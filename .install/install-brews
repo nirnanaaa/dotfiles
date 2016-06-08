@@ -17,7 +17,6 @@ brew install ctags
 brew install dotwrp
 brew install ec2-api-tools
 brew install elinks
-brew install emacs
 brew install erlang
 brew install exiftool
 brew install faac
@@ -33,7 +32,6 @@ brew install gdbm
 brew install gdk-pixbuf
 brew install geoip
 brew install gettext
-brew install gfortran
 brew install ghc
 brew install giblib
 brew install gist
@@ -50,7 +48,6 @@ brew install gnutls
 brew install graphicsmagick
 brew install graphviz
 brew install guile
-brew install haproxy
 brew install haskell-platform
 brew install hdf5
 brew install html2text
@@ -93,14 +90,11 @@ brew install mercurial
 brew install metis
 brew install mit-scheme
 brew install mobile-shell
-brew install msmtp
 brew install mtr
-brew install mutt --with-pgp-verbose-mime-patch --with-slang
 brew install netcat
 brew install nettle
 brew install nmap
 brew install node
-brew install notmuch
 brew install objective-caml
 brew install octave
 brew install opencore-amr

@@ -16,5 +16,5 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 # fix hostname
-scutil --set LocalHostName przl-mbp
-scutil --set HostName przl-mbp
+scutil --set LocalHostName pwnzly-mbp
+scutil --set HostName pwnzly-mbp

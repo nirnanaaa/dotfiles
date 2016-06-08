@@ -18,8 +18,8 @@ red=$(printf "\033\\[31m")
 export blu clr grn gry mag red
 
 # gnu tools
-if which gls > /dev/null; then alias ls=gls; fi
-if which gdircolors > /dev/null; then alias dircolors=gdircolors; fi
+# if which gls > /dev/null; then alias ls=gls; fi
+# if which gdircolors > /dev/null; then alias dircolors=gdircolors; fi
 
 # turn off xon/xoff to avoid conflict with CTRL-s readline forward search
 stty -ixon
@@ -29,11 +29,11 @@ alias ....="cd ../../.."
 alias ...="cd ../.."
 alias ..="cd .."
 alias clear="echo use CTRL-L instead. && false"
-alias e='emacs -nw'
 alias gist='gist -p'
+alias gs='git status'
+alias gp='git push'
 alias gst='git status'
 alias gti='git'
-alias i='irssi-customized'
 alias l='ls --color -alFh'
 alias less='less -r' # interpret color
 alias ll='ls --color -bF'

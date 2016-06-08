@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-set -u
-
-PATH=$PATH:/usr/sbin:/usr/local/bin:/usr/local/sbin
-
-exec 2>&1
-exec bitlbee -D -n -p 6468 -i 127.0.0.1

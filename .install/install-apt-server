@@ -1,0 +1,16 @@
+#!/bin/sh
+
+sudo apt-get -y install \
+  ack \
+  htop \
+  git \
+  ifstat \
+  iftop \
+  pv \
+  ssldump \
+  tcpflow \
+  tmux \
+  tree \
+  watch \
+  wget \
+  zsh

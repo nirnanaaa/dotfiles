@@ -5,10 +5,6 @@ daemons="/System/Library/LaunchDaemons"
 alias mds_disable="sudo launchctl unload -w $daemons/com.apple.metadata.mds.plist"
 alias mds_enable="sudo launchctl load -w $daemons/com.apple.metadata.mds.plist"
 
-alias e='reattach-to-user-namespace emacs'
-alias irssi='reattach-to-user-namespace irssi-customized'
-alias m='reattach-to-user-namespace mutt'
-alias s='reattach-to-user-namespace soywiki'
 alias vim='reattach-to-user-namespace /usr/local/bin/vim'
 alias v=vim
 alias macdown='open -a macdown'
@@ -19,19 +15,9 @@ export PATH=$PATH:/usr/X11/bin
 export JULIA_PATH=~/Projects/third-party/julia
 export PATH=$PATH:$JULIA_PATH
 
-# hadoop
-export HADOOP_HOME=/usr/local/hadoop
-export PATH=$PATH:$HADOOP_HOME/bin
-
-# pig
-export PIG_HOME="/usr/local/pig/"
-export PATH=$PATH:$PIG_HOME/bin
-
 # other
 export PATH=$PATH:/Applications/Octave.app/Contents/Resources/bin
-export PATH=$PATH:/opt/local/lib/erlang/lib/rabbitmq_server-1.4.0/sbin
 export PATH=$PATH:/opt/samiam
-export PATH=$PATH:/usr/local/mysql/bin
 
 # python
 if [[ -n "$CANOPY" ]]
@@ -43,9 +29,6 @@ fi
 
 # anaconda
 export PATH="$HOME/anaconda/bin:$PATH"
-
-# docker
-export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # java
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
