@@ -18,3 +18,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 # fix hostname
 scutil --set LocalHostName pwnzly-mbp
 scutil --set HostName pwnzly-mbp
+
+dir=$(dirname $0)
+$dir/install-brews
+sudo $dir/install-gems
+pip install -r $dir/snapshot-pip
