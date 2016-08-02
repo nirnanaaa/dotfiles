@@ -43,16 +43,19 @@ alias potoday='2>/dev/null cat $(plog) | grep completed\. | wc -l'
 alias pwdc="pwd | pbcopy"
 alias s='soywiki'
 alias tree='tree -C' # color
-alias v='vim .'
 alias ag="ag --pager='less -R'"
 
+it2prof() { echo -e "\033]50;SetProfile=$1\a" }
+
 # base
-export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=~/Library/Python/2.7/bin:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
 
 # mode
 export FOCUS=${FOCUS:-s}
-alias work='source solarized --theme light && FOCUS=s t'
-alias play='source solarized --theme dark && FOCUS=b t'
+alias work='it2prof work && source solarized --theme light && VIM_THEME=dark SESSION=work FOCUS=s t'
+alias play='it2prof play && source solarized --theme dark && VIM_THEME=light SESSION=play FOCUS=b t'
+
+alias v='vim .'
 
 # java
 export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF8'

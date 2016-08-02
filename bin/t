@@ -2,6 +2,10 @@
 
 sessions="$(tmux ls 2> /dev/null)"
 ret="$?"
+if [ ! -z "$SESSION" ]; then
+  SESSION="$SESSION" tmux
+  exit 0
+fi
 
 if test "$ret" -eq 0
   then
@@ -17,4 +21,3 @@ if test "$ret" -eq 0
   else
     tmux new
 fi
-

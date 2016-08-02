@@ -16,8 +16,8 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 # fix hostname
-scutil --set LocalHostName pwnzly-mbp
-scutil --set HostName pwnzly-mbp
+scutil --set LocalHostName pwnzzly
+scutil --set HostName pwnzzly
 
 dir=$(dirname $0)
 $dir/install-brews

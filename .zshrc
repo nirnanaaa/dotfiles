@@ -28,7 +28,7 @@ setopt interactivecomments
 setopt auto_cd
 
 # color listing
-eval $(dircolors ~/.dir_colors)
+eval $(gdircolors ~/.dir_colors)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # cdpath
